@@ -1,13 +1,13 @@
 :root {
   --font-body: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
-  --color-background: #ffffff;
-  --color-surface: #ffffff;
-  --color-primary: #1a365d;
-  --color-accent: #24477f;
-  --color-text: #1f2933;
-  --color-text-light: #ffffff;
-  --shadow-soft: 0 10px 20px rgba(46, 78, 124, 0.08);
+  --color-background: #181e25;
+  --color-surface: #232b35;
+  --color-primary: #99c1ff;
+  --color-accent: #78a5ef;
+  --color-text: #f3f4f6;
+  --color-text-light: #c2cbe0;
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.40);
   --max-width: 1100px;
 }
 
@@ -282,7 +282,7 @@ main {
 }
 
 .site-footer {
-  background-color: var(--color-primary);
+  background-color: var(--color-surface);
   color: #fff;
   padding: 2rem 0;
   text-align: center;
@@ -305,6 +305,7 @@ main {
 .contact-details dt {
   font-weight: 600;
   color: var(--color-primary);
+  margin-bottom: 1rem;
 }
 
 .contact-details dd {
@@ -461,3 +462,67 @@ main {
   }
 }
 
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-background: #181e25;
+    --color-surface: #232b35;
+    --color-primary: #99c1ff;
+    --color-accent: #78a5ef;
+    --color-text: #f3f4f6;
+    --color-text-light: #c2cbe0;
+    --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.40);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+  }
+
+  main {
+    background-color: var(--color-surface);
+  }
+
+  .site-header {
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    border-bottom: 1px solid rgba(153, 193, 255, 0.08);
+  }
+
+  .brand p,
+  .intro-text p,
+  .contact-details dd {
+    color: var(--color-text-light);
+  }
+
+  .nav-list a {
+    color: var(--color-text-light);
+  }
+
+  .nav-list a:hover,
+  .nav-list a:focus {
+    color: var(--color-primary);
+  }
+
+  .section {
+    background: var(--color-surface);
+  }
+
+  .button {
+    border-color: rgba(153, 193, 255, 0.3);
+    color: var(--color-primary);
+    background: #232b35;
+  }
+
+  .button.primary {
+    background: var(--color-primary);
+    color: #181e25;
+  }
+
+  .button:hover,
+  .button:focus {
+    box-shadow: 0 15px 30px rgba(120, 165, 239, 0.30);
+    background: #22304a;
+    color: var(--color-accent);
+    border-color: var(--color-accent);
+  }
+}
