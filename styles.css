@@ -366,6 +366,44 @@ main {
   border-color: rgba(26, 54, 93, 0.24);
 }
 
+@media (max-width: 960px) {
+  .site-header {
+    padding: 1.75rem 0;
+  }
+
+  .site-header .container {
+    gap: 1.5rem;
+  }
+
+  .intro-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.8fr);
+    gap: 2.5rem;
+    padding: 2.5rem;
+  }
+
+  .intro-text {
+    padding: 2.25rem;
+  }
+
+  .intro-photo {
+    width: clamp(160px, 25vw, 200px);
+    height: clamp(160px, 25vw, 200px);
+  }
+
+  .intro-details {
+    padding: 1.75rem;
+  }
+
+  .cards {
+    gap: 1.25rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+
+  .cards article {
+    padding: 1.6rem;
+  }
+}
+
 @media (max-width: 720px) {
   .site-header .container {
     flex-direction: column;
@@ -375,25 +413,129 @@ main {
 
   .nav-list {
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 0.75rem;
+  }
+
+  .section {
+    padding: 3.25rem 0;
+  }
+
+  .container {
+    width: min(100% - 1.5rem, var(--max-width));
+  }
+
+  .intro-layout {
+    grid-template-columns: 1fr;
+    padding: 2.1rem;
+    gap: 2rem;
+  }
+
+  .intro-profile {
+    order: -1;
+    justify-items: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .intro-text {
+    padding: 2rem;
+    text-align: center;
+    align-items: center;
+  }
+
+  .intro-text p {
+    text-align: left;
+  }
+
+  .intro-text .cta-group {
+    width: 100%;
+    justify-content: center;
   }
 
   .intro-details {
+    padding: 1.6rem;
+    width: min(460px, 100%);
+    text-align: left;
+  }
+
+  .intro-details dd {
+    text-align: left;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .cards article {
     padding: 1.5rem;
+  }
+
+  .contact {
+    padding: 2.2rem;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .button.primary {
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 540px) {
+  .section {
+    padding: 2.75rem 0;
+  }
+
+  .site-header {
+    padding: 1.5rem 0;
+  }
+
+  .site-header .container {
+    align-items: center;
+  }
+
+  .brand h1 {
+    font-size: 1.5rem;
+  }
+
+  .brand p {
+    font-size: 0.9rem;
+  }
+
+  .intro-layout {
+    padding: 1.6rem;
+    gap: 1.6rem;
+  }
+
+  .intro-text {
+    padding: 1.6rem;
+  }
+
+  .intro-photo {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 1.4rem;
+  }
+
+  .intro-details {
+    padding: 1.4rem;
+  }
+
+  .cards {
+    gap: 1rem;
+  }
+
+  .cards article {
+    padding: 1.35rem;
   }
 
   .contact {
     padding: 2rem;
   }
 
-  .intro-layout {
-    grid-template-columns: 1fr;
-    padding: 2rem;
-  }
-
-  .intro-profile {
-    order: -1;
-    justify-items: center;
+  .contact p {
+    font-size: 0.95rem;
   }
 }
 
