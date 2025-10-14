@@ -206,6 +206,11 @@ main {
   margin-top: 2rem;
 }
 
+.cards a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
 .cards article {
   background-color: var(--color-surface);
   padding: 1.8rem;
