@@ -124,6 +124,11 @@ main {
   max-width: 620px;
 }
 
+.intro-text a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
 .intro-text .cta-group {
   margin-top: auto;
   display: flex;
