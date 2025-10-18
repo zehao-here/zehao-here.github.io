@@ -1,0 +1,54 @@
+{%- assign current = page.url | default: "/" -%}
+<div class="container">
+  <div class="brand">
+    <h1>{{ site.title }}</h1>
+    <p>PhD Student, HKU Business School</p>
+  </div>
+  <nav aria-label="Primary" data-nav="primary">
+    <ul class="nav-list">
+      <li>
+        <a
+          href="{{ "/" | relative_url }}"
+          {% if current == "/" %}class="is-active" aria-current="page"{% endif %}
+          data-nav-link
+        >Home</a>
+      </li>
+      <li>
+        <a
+          href="{{ "/research" | relative_url }}"
+          {% if current == "/research/" %}class="is-active" aria-current="page"{% endif %}
+          data-nav-link
+        >Research</a>
+      </li>
+      <!-- <li>
+        <a
+          href="{{ "/publications" | relative_url }}"
+          {% if current == "/publications/" %}class="is-active" aria-current="page"{% endif %}
+          data-nav-link
+        >Publications</a>
+      </li> -->
+      <!-- <li>
+        <a
+          href="{{ "/teaching" | relative_url }}"
+          {% if current == "/teaching/" %}class="is-active" aria-current="page"{% endif %}
+          data-nav-link
+        >Teaching</a>
+      </li> -->
+      <li>
+        <a
+          href="{{ "/contact" | relative_url }}"
+          {% if current == "/contact/" %}class="is-active" aria-current="page"{% endif %}
+          data-nav-link
+        >Contact</a>
+      </li>
+      <li>
+        <a
+          href="{{ "/blog" | relative_url }}"
+          {% if current contains "/blog" or page.collection == "posts" %}class="is-active" aria-current="page"{% endif %}
+          data-nav-link
+        >Blog</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+

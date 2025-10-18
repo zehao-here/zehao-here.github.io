@@ -1,0 +1,33 @@
+title: Zehao Zhang
+description: >-
+  Personal academic website for Zehao Zhang, PhD student at HKU Business School
+  focusing on applied microeconomic theory, artificial intelligence, and organizational economics.
+url: "https://zehao-here.github.io"
+baseurl: ""
+permalink: /blog/:slug/
+excerpt_separator: "<!--more-->"
+markdown: kramdown
+theme: null
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+exclude:
+  - README.md
+  - Gemfile.lock
+  - node_modules
+  - vendor
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+      author: Zehao Zhang
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: page
+collections_dir: ""
+timezone: Asia/Hong_Kong
+
