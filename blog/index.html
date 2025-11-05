@@ -4,46 +4,41 @@ title: Blog
 permalink: /blog/
 ---
 
-<section class="section intro">
-  <div class="container">
-    <div class="cards-overview">
-      <h2>About My Blog</h2>
-      <p>
-        I had and still have the dream of become a writer (absolutely, not only writing academic papers). But since the idea came to me, it is only natural to me that I do this when I am somewhat old (and maybe wiser).
-      </p>
-      <p>
-        There's something in my head that would otherwise be too eloquent even to talk with my friends. I am just using them as a practice for becoming a writer. Could be personal, sometimes offensive, but happy to share with you.
-      </p>
-      <p>
-        I put two constraints on myself. Every post can only be written within no more than 1 hour. Posts will be in Chinese.
-      </p>
-    </div>
+<section class="section">
+  <div class="container flow">
+    <p class="eyebrow">About the blog</p>
+    <p>
+      I had and still have the dream of becoming a writer (not only of academic papers). When the idea arrived, it felt natural to begin when I am older and perhaps wiser.
+    </p>
+    <p>
+      These notes host leftover thoughts that may be too eloquent—or too strange—for casual conversation. They are a practice ground for writing, sometimes personal and occasionally sharp around the edges.
+    </p>
+    <p>I write each post within an hour. Most will be in Chinese.</p>
   </div>
 </section>
 
 <section class="section">
-  <div class="container">
+  <div class="container flow">
+    <h2>Entries</h2>
     {% if site.posts.size > 0 %}
     <ol class="post-list">
       {% for post in site.posts %}
-      <li class="post-card">
-        <article>
-          <p class="post-card-meta">
-            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
-            {% if post.tags and post.tags.size > 0 %}
-            <span aria-hidden="true">&middot;</span>
-            <span>{{ post.tags | array_to_sentence_string }}</span>
-            {% endif %}
-          </p>
-          <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-          <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
-          <a class="text-link" href="{{ post.url | relative_url }}">Read more</a>
-        </article>
+      <li>
+        <p class="post-meta">
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+          {% if post.tags and post.tags.size > 0 %}
+          <span aria-hidden="true">&middot;</span>
+          <span>{{ post.tags | array_to_sentence_string }}</span>
+          {% endif %}
+        </p>
+        <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        <p class="muted">{{ post.excerpt | strip_html | truncate: 160 }}</p>
+        <a class="accent-link" href="{{ post.url | relative_url }}">Read more</a>
       </li>
       {% endfor %}
     </ol>
     {% else %}
-    <p class="empty-state">No posts yet. Stay tuned for updates.</p>
+    <p class="muted">No posts yet. Stay tuned for updates.</p>
     {% endif %}
   </div>
 </section>
