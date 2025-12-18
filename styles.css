@@ -22,8 +22,7 @@
 
   body {
     background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.94)),
-    url("pics/bg_pics/say_sue_me_album.png") right 2% bottom 6%  / min(64vw, 280px) auto no-repeat,
+      linear-gradient(135deg, rgba(255, 255, 255, 0.86), rgba(255, 255, 255, 0.95)),
       var(--color-background);
   }
 }
@@ -49,8 +48,7 @@ body {
   line-height: 1.7;
   color: var(--color-text);
   background:
-    /* linear-gradient(135deg, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.94)), */
-    url("pics/bg_pics/say_sue_me_album.png") right 2% bottom 6% / min(36vw, 340px) auto no-repeat,
+    linear-gradient(135deg, rgba(255, 255, 255, 0.86), rgba(255, 255, 255, 0.95)),
     var(--color-background);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -95,6 +93,26 @@ a:focus {
 a:focus-visible {
   outline: 2px dashed var(--color-accent);
   outline-offset: 3px;
+}
+
+.floating-image {
+  position: fixed;
+  right: 2%;
+  bottom: 5%;
+  width: clamp(160px, 22vw, 220px);
+  max-width: 32vw;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+  opacity: 0.9;
+}
+
+.floating-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: transparent;
+  mix-blend-mode: multiply;
 }
 
 img,
@@ -337,7 +355,8 @@ main {
   padding: 0;
   display: grid;
   gap: 0.4rem;
-  font-family: var(--font-sans);
+  /* font-family: var(--font-sans); */
+  font-family: var(--font-body);
   font-size: 0.95rem;
   color: var(--color-muted);
 }
@@ -508,6 +527,12 @@ main {
   .intro-side {
     max-width: 320px;
   }
+
+  .floating-image {
+    right: 2%;
+    bottom: 4%;
+    width: clamp(160px, 32vw, 220px);
+  }
 }
 
 @media (max-width: 760px) {
@@ -528,8 +553,7 @@ main {
 
   body {
     background:
-      linear-gradient(170deg, rgba(255, 255, 255, 0.93), rgba(255, 255, 255, 0.99) 70%),
-      url("pics/bg_pics/say_sue_me_album.png") right -18% bottom 2% / min(82vw, 220px) auto no-repeat,
+      linear-gradient(170deg, rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.995) 70%),
       var(--color-background);
   }
 
@@ -541,13 +565,26 @@ main {
   .post-list li {
     padding-left: 1rem;
   }
+
+  .floating-image {
+    left: 50%;
+    right: auto;
+    bottom: 10%;
+    transform: translateX(-50%);
+    width: clamp(140px, 58vw, 200px);
+  }
 }
 
 @media (max-width: 480px) {
   body {
     background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 1)),
+      linear-gradient(182deg, rgba(255, 255, 255, 0.97), rgba(255, 255, 255, 1)),
       var(--color-background);
+  }
+
+  .floating-image {
+    bottom: 12%;
+    width: clamp(120px, 62vw, 180px);
   }
 }
 
