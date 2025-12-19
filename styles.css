@@ -567,6 +567,7 @@ main {
   }
 
   .floating-image {
+    display: none;
     left: 50%;
     right: auto;
     bottom: 10%;
