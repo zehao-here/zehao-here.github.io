@@ -464,6 +464,24 @@ main {
   color: var(--color-muted);
 }
 
+.post-page-time {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  padding: 2rem 0;
+}
+
+.post-page-title {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--color-text);
+  padding: 1rem 0;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+}
+
 .post-link {
   font-family: var(--font-heading);
   font-size: clamp(1.6rem, 3.2vw, 2rem);
